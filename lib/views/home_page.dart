@@ -10,10 +10,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
+        backgroundColor: const Color.fromARGB(255, 238, 235, 235),
         child: ListView.builder(
           itemCount: 1,
           itemBuilder: (context, index) {
-            return Column(children: [Container()]);
+            return Column(
+              children: [DrawerHeader(child: Icon(Icons.favorite, size: 80))],
+            );
           },
         ),
       ),
