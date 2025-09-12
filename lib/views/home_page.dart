@@ -13,11 +13,7 @@ class HomePage extends StatelessWidget {
         child: ListView.builder(
           itemCount: 1,
           itemBuilder: (context, index) {
-            return Column(
-              children: [
-                
-              ],
-            );
+            return Column(children: [Container()]);
           },
         ),
       ),
