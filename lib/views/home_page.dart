@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_note/views/widgets/customdrawer.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -9,17 +10,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        backgroundColor: const Color.fromARGB(255, 238, 235, 235),
-        child: ListView.builder(
-          itemCount: 1,
-          itemBuilder: (context, index) {
-            return Column(
-              children: [DrawerHeader(child: Icon(Icons.favorite, size: 80))],
-            );
-          },
-        ),
-      ),
+      drawer: CastumDrawer(),
       body: ListView.builder(
         itemCount: todoList.length,
         itemBuilder: (context, index) {
